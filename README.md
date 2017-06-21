@@ -1,8 +1,8 @@
-# Project Title
+# PART A: HTML + CSS
 
-Simple boilerplate project
+This project uses Html + Css(Sass).
 
-This projevt uses Bootstrap & Jquery by default loaded using cdn
+I choose to use Sass because it helps me by keeping the style sheets concise. It provides variables as a way to store information that I want to reuse throughout my style sheet. Also it don’t repeat similar CSS statements Throughout the project
 
 ## Getting Started
 
