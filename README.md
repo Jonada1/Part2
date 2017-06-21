@@ -1,8 +1,8 @@
-# PART A: HTML + CSS
+# PART B: Javascript
 
-This project uses Html + Css(Sass).
+This project uses Html + Css(Sass) + Angular.
 
-I choose to use Sass because it helps me by keeping the style sheets concise. It provides variables as a way to store information that I want to reuse throughout my style sheet. Also it don’t repeat similar CSS statements Throughout the project
+I choose to use AngularJs because the frameowrk can can help architect the code so that it is modular (therefore reusable), dry, readable, performant and secure. jQuery or VanillaJs is not a framework, so it doesn't help in these regards. It's data-binding let putting  {{data bindings}} whenever there are dynamic data. Angular provides $scope handler, which helped me populate data-bindings  through call to the web server.
 
 ## Getting Started
 
