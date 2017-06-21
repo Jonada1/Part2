@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html ng-app="advertisementApp" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>McMakler Test</title>
+
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div ng-controller="advertisementController" class="listing-wrapper">
+    <div class="container">
+
+        <div ng-repeat="advertisement in advertisements" class="item column-4 column-6">
+            <div class="field-image">
+                <img typeof="foaf:Image" src="{{advertisement.advertisementAssets[0].advertisementThumbnails.inventory_m.url}}">
+            </div>
+            <div class="field-property-for">
+                <div class="field-content">
+                    <p class="field-description">Mieten teststdfghj</p>
+                </div>
+            </div>
+            <div class="realestate-summary">
+                <div class="field-title">
+                    <div class="field-content">
+                        <h4>{{advertisement.title}}</h4>
+                    </div>
+                </div>
+                <div class="field-location">
+                    <div class="field-content">
+                        <p class="field-description"><span class="postal-code">{{advertisement.realestateSummary.address.postalCode}}</span>
+                            <span class="street"> {{advertisement.realestateSummary.address.street}} / {{advertisement.realestateSummary.address.city}}</span></p>
+                    </div>
+                </div>
+                <div class="field-advertisementPrice">
+                    <div class="field-content">
+                        <p class="field-description"><strong>{{advertisement.advertisementPrice.baseRent}} €</strong></p>
+                    </div>
+                </div>
+                <div class="field-space">
+                    <div class="field-content">
+                        <p class="field-description">ab {{advertisement.realestateSummary.space | number:0}} m<sup>2</sup></p>
+                    </div>
+                </div>
+                <div class="field-rooms">
+                    <div class="field-content">
+                        <p class="field-description">{{advertisement.realestateSummary.numberOfRooms}} Zimmer test</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- <div class="item column-4 column-6">
+             <div class="field-image">
+                 <img typeof="foaf:Image" src="/assets/images/property-1.jpg">
+             </div>
+             <div class="field-property-for">
+                 <div class="field-content">
+                     <p class="field-description">Mieten</p>
+                 </div>
+             </div>
+             <div class="realestate-summary">
+                 <div class="field-title">
+                     <div class="field-content">
+                         <h4>{{advertisement.title}}</h4>
+                     </div>
+                 </div>
+                 <div class="field-location">
+                     <div class="field-content">
+                         <p class="field-description"><span class="postal-code">35764</span>
+                             <span class="street"> Sinn / Fleisbach</span></p>
+                     </div>
+                 </div>
+                 <div class="field-advertisementPrice">
+                     <div class="field-content">
+                         <p class="field-description"><strong>1.954 €</strong></p>
+                     </div>
+                 </div>
+                 <div class="field-space">
+                     <div class="field-content">
+                         <p class="field-description">ab 35 m<sup>2</sup></p>
+                     </div>
+                 </div>
+                 <div class="field-rooms">
+                     <div class="field-content">
+                         <p class="field-description">3 Zimmer</p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="item column-4 column-6">
+             <div class="field-image">
+                 <img typeof="foaf:Image" src="/assets/images/property-1.jpg">
+             </div>
+             <div class="field-property-for">
+                 <div class="field-content">
+                     <p class="field-description">Mieten</p>
+                 </div>
+             </div>
+             <div class="realestate-summary">
+                 <div class="field-title">
+                     <div class="field-content">
+                         <h4>Denkmalgeschutztes Mehrfamilien-haus in Waghausel</h4>
+                     </div>
+                 </div>
+                 <div class="field-location">
+                     <div class="field-content">
+                         <p class="field-description"><span class="postal-code">35764</span>
+                             <span class="street"> Sinn / Fleisbach</span></p>
+                     </div>
+                 </div>
+                 <div class="field-advertisementPrice">
+                     <div class="field-content">
+                         <p class="field-description"><strong>110.000 €</strong></p>
+                     </div>
+                 </div>
+                 <div class="field-space">
+                     <div class="field-content">
+                         <p class="field-description">ab 35 m<sup>2</sup></p>
+                     </div>
+                 </div>
+                 <div class="field-rooms">
+                     <div class="field-content">
+                         <p class="field-description">3 Zimmer</p>
+                     </div>
+                 </div>
+             </div>
+     -->
+    </div>
+</div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.1/angular.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/js/app.js"></script>
+<script src="assets/js/advertisementService.js"></script>
+<script src="assets/js/advertisementController.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+
+</html>
