@@ -11,8 +11,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     environments = require('gulp-environments'),
     del = require('del'),
-    imagemin = require('gulp-imagemin'),
-    project = require('gulp-angular');
+    imagemin = require('gulp-imagemin');
+
 
 let development = environments.development;
 let production = environments.production;
@@ -61,10 +61,6 @@ let config = {
     }
 };
 
-
-
-project.modules.add('app')
-    .add('advertisementApp');
 
 gulp.task('jshint', () => {
     "use strict";
