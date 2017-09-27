@@ -1,8 +1,6 @@
-# PART B: Javascript
+# Real Estate - Angular Project
 
 This project uses Html + Css(Sass) + Angular.
-
-I choose to use AngularJs because the frameowrk can can help architect the code so that it is modular (therefore reusable), dry, readable, performant and secure. jQuery or VanillaJs is not a framework, so it doesn't help in these regards. It's data-binding let putting  {{data bindings}} whenever there are dynamic data. Angular provides $scope handler, which helped me populate data-bindings  through call to the web server.
 
 ## Getting Started
 
